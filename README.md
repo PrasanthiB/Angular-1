@@ -29,24 +29,31 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Git Repository
 --------------
-Step 1:
+
+Step 1: To create new Git Repository
 1)Download and install git  - cmd git -v(version check)
 2)Open github.com and create the account
 3)Create  - git config --global user.name "PrasanthiB"
           - git config --global user.email "prasanthi.bobbilli@gmail.com"
 4)Check:  - git config --list
 
-Step 2:
+
+Step 2: To upload new project
 Project - Repository
 --------------------
 1)Add project cmd- cd appname
 2)git init
-3)git remote add origin https://github.com/PrasanthiB/Angular-1.git
+3)git remote add origin https://github.com/PrasanthiB/Angular-1.git(git generated url)
 4)git remote -v 
 
-Step 3:
+
+Step 3: To update code
 Code Sync
 ---------
+1)git add . (Changes -> staged changes)
+2)git commit -m "xxxxxxx" (staged changes -> zero)
+3)git push  note:give (git push --set-upstream origin master -f)
+4)
 
 
 open project using cmd prompt - cd appname
