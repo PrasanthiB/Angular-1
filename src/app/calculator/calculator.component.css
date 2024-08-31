@@ -1,0 +1,75 @@
+/* General styles for the parent container */
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Styles for the child container */
+.child {
+    background-color: #ffffff;
+    padding: 25px 35px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.child h1 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #333333;
+}
+
+.child label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #555555;
+    width: 100px;
+    text-align: left;
+}
+
+.child input {
+    padding: 8px;
+    margin-bottom: 15px;
+    width: calc(100% - 110px);
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.child button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 70px;
+}
+
+.child button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.child button:not(:disabled) {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+.child button:not(:disabled):hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.child h2 {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333333;
+}

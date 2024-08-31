@@ -1,0 +1,19 @@
+<table>
+    <thead>
+        <tr>
+            <th>userId</th>
+            <th>id</th>
+            <th>title</th>
+            <th>completed</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let mail of gmail" [ngClass]="mail.completed ? 'completed' : 'not-completed'">
+            <td>{{mail.userId}}</td>
+            <td>{{mail.id}}</td>
+            <td>{{mail.title}}</td>
+            <td>{{mail.completed? 'true' :'false'}}</td>
+        </tr>
+    </tbody>
+</table>
+

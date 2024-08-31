@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>DICE ROLL</title>
+</head>
+<body>
+<div class="container">
+  <div class="dice-wrap">
+    <img id="dice-1">
+    <!-- <img id="dice-2"> -->
+  </div>
+  <p id="total"></p>
+  <button onclick="RollDice()">ROLL THE DICE</button>
+</div>
+
+<script type="text/javascript">
+  let images = ["dice-1.png",
+                "dice-2.png",
+                "dice-3.webp",
+                "dice-4.webp",
+                "dice-5.png",
+                "dice-6.png",
+  ];
+
+  let dice = document.querySelectorAll("img");
+
+  function RollDice(){
+    dice.forEach(function(die){
+      die.classList.add("roll");
+    });
+    setTimeout(function(){
+      dice.forEach(function(die){
+        die.classList.remove("roll");
+    });
+
+      let dice1val = Math.floor(Math.random()*6);
+      let dice2val = Math.floor(Math.random()*6);
+      console.log(dice1val,dice2val);
+      document.querySelector("#dice-1").setAttribute("src", images[dice1val]);
+      document.querySelector("#dice-2").setAttribute("src", images[dice2val]);
+      document.querySelector("#total").innerHTML = "Your Roll is " + ( (dice1val +1) + (dice2val + 1));
+  },
+  1000
+);
+}
+RollDice();
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+body {
+    height: 600px;
+    width: 90%;
+    background-color: rgb(216, 176, 102);
+}
+
+.header-container {
+    height: 600px;
+    width: 80%;
+    margin: 10px 120px 30px;
+    background-color: white;
+
+}
+
+.header2-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h1 {
+    margin: 10px 250px;
+
+}
+
+.left-container {
+    width: 46%;
+    height: 500px;
+    background-color: gainsboro;
+    border-radius: 10px;
+}
+
+.right-container {
+    width: 46%;
+    height: 500px;
+    background-color: gainsboro;
+    border-radius: 10px;
+}
+
+.label1-container {
+    margin: 40px 120px;
+}
+
+button {
+    width: 120px;
+    height: 30px;
+    margin: 0px 200px;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+}
+
+.label2-container {
+    margin: 0px 120px;
+    color: rgb(224, 100, 55);
+}

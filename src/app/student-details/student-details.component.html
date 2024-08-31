@@ -1,0 +1,47 @@
+<div>
+    <form [formGroup]="studentForm">
+        <h1>{{id ? 'Update Student Form' : 'Create Student Form'}}</h1>
+
+        <label for="">Logo</label>
+        <input type="text" formControlName="school_logo">
+        <br>
+
+        <label for="">School-Name</label>
+        <input type="text" formControlName="school_name">
+        <br>
+
+        <label for="">Name</label>
+        <input type="text" formControlName="name">
+        <br>
+
+        <label for="">DOB</label>
+        <input type="text" formControlName="dob">
+        <br>
+
+        <label for="">Phone</label>
+        <input type="text" formControlName="phone">
+        <br>
+
+        <label for="">City</label>
+        <input type="text" formControlName="city">
+        <br>
+
+        <label for="">E-Mail</label>
+        <input type="text" formControlName="email">
+        <br>
+
+        <label for="">Profile Picture</label>
+        <input type="text" formControlName="profile_picture">
+        <br>
+
+        <label for="">School-City</label>
+        <input type="text" formControlName="school_city">
+        <br>
+
+        <label for="">School-Pin</label>
+        <input type="text" formControlName="school_pin">
+        <br>
+
+        <button (click)="create()">{{id ? 'Update' : 'Create'}}</button>
+    </form>
+</div>

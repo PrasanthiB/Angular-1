@@ -1,0 +1,133 @@
+/* General form elements styling */
+input[type="text"], input[type="number"], select, button {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+}
+
+input[type="text"], input[type="number"] {
+    width: 150px;
+}
+
+label {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+/* Button styling */
+button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+thead {
+    background-color: #333; /* Dark background for header */
+    color: white; /* White text for header */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for even rows */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #eaf5fa; /* Light blue for odd rows */
+}
+
+tbody tr:hover {
+    background-color: #d3e8f2; /* Highlight row on hover */
+}
+
+/* Image styling */
+img {
+    border-radius: 5px; /* Slightly rounded corners for images */
+    border: 1px solid #ccc; /* Light border around images */
+}
+
+/* Action buttons specific styles */
+button.delete {
+    background-color: #e74c3c; /* Red background */
+}
+
+button.view {
+    background-color: #3498db; /* Blue background */
+}
+
+button.edit {
+    background-color: #f39c12; /* Orange background */
+}
+
+button.delete:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+button.view:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+button.edit:hover {
+    background-color: #e67e22; /* Darker orange on hover */
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    input[type="text"], input[type="number"], select, button {
+        width: 100%; /* Full-width inputs and buttons */
+        margin-top: 10px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block; /* Make the table responsive */
+    }
+
+    thead {
+        display: none; /* Hide table headers */
+    }
+
+    tr {
+        margin-bottom: 15px; /* Add spacing between rows */
+    }
+
+    td {
+        padding: 10px;
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        content: attr(data-label); /* Add the label before each cell */
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}

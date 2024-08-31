@@ -1,0 +1,14 @@
+<div class="rectangle">
+    <h1>Rectangle</h1>
+    <label for="">Length: </label>
+    <input type="number" [(ngModel)] = "length">
+    <br><br><br>
+
+    <label for="">Breath: </label>
+    <input type="number" [(ngModel)] = "breath">
+    <br><br><br>
+    <button (click)="area()">Area</button>
+    <button (click)="perimeter()">Perimeter</button>
+
+    <h2>Value {{this.value}}</h2>
+</div>

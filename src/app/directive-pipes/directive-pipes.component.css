@@ -1,0 +1,9 @@
+.fail{
+    background-color: yellow;
+}
+.pass{
+    background-color: green;
+}
+.invalid{
+    background-color: red;
+}

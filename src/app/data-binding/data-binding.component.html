@@ -1,0 +1,18 @@
+<!-- interpolation -->
+<h1>your name is {{fullName}}</h1>
+<h2>your age is {{age}}</h2>
+<h2>Indian: {{isIndian}}</h2>
+
+<!-- property binding -->
+ <button [disabled]="isValid">submit</button>
+ <img  alt="image" [src]="url">
+
+ <!-- event binding -->
+  <button (click) ="submit()">click me</button>
+  <input (keypress)="typing()" type="text">
+
+
+  <!-- two way data binding -->
+   <label for="input">phone: </label>
+   <input type="text" id ="input" [(ngModel)]="phone">
+   <p>{{phone}}</p>

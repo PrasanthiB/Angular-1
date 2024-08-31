@@ -1,0 +1,103 @@
+/* Style for the input, select, and button elements */
+input[type="text"], select, button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Style for the input text field */
+input[type="text"] {
+    width: 250px;
+}
+
+/* Style for the labels */
+label {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+/* Style for the select dropdowns */
+select {
+    padding: 8px;
+    margin-left: 5px;
+}
+
+/* Style for the button */
+button {
+    background-color: #39b54a; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #34a148; /* Slightly darker green on hover */
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #e9f7ef; /* Light greenish background for odd rows */
+}
+
+tbody tr:hover {
+    background-color: #d1f0d8; /* Slightly darker green on hover */
+}
+
+img {
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+button {
+    margin-right: 5px; /* Space between action buttons */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Action buttons specific styles */
+button.view {
+    background-color: #3498db; /* Blue */
+}
+
+button.edit {
+    background-color: #f39c12; /* Orange */
+}
+
+button.delete {
+    background-color: #e74c3c; /* Red */
+}
+
+button.view:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+button.edit:hover {
+    background-color: #e67e22; /* Darker orange on hover */
+}
+
+button.delete:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}

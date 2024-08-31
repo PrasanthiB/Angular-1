@@ -1,0 +1,10 @@
+
+
+<h1>Photo Gallery</h1>
+<div *ngFor="let photo of photos">
+    <label for="">Name: {{photo.name}}</label><br>
+    <label for="">Height: {{photo.height}}</label><br>
+    <label for="">Width: {{photo.width}}</label><br>
+    <img src="{{photo.url}}" alt="image">
+
+</div>

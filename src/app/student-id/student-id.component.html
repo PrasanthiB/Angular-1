@@ -1,0 +1,69 @@
+<!-- Filtering -->
+ <label for="">Filter Data:</label>
+<input type="text" [(ngModel)]="term" (keyup)="filter()">
+
+<!-- Sorting -->
+
+<label for="">Sort Column:</label>
+<select name="" id="" [(ngModel)]="column">
+    <option value="id">ID</option>
+    <option value="name">Name</option>
+    <option value="dob">Date of Birth</option>
+    <option value="phone">Phone</option>
+    <option value="city">City</option>
+    <option value="email">E-Mail</option>
+</select>
+<label for="">Sort Order:</label>
+<select name="" id="" [(ngModel)]="order">
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
+</select>
+
+<button (click)="sort()">Sort</button>
+
+<!-- Pagination -->
+<label for="">Data Limit:</label>
+<input type="number" [(ngModel)]="limit">
+<label for="">Page:</label>
+<select name="" id="" [(ngModel)]="page">
+    <option >1</option>
+    <option >2</option>
+    <option >3</option>
+    <option >4</option>
+    <option >5</option>
+</select>
+<button (click)="pages()">Page</button>
+
+<div class="parent-container">
+
+    <div *ngFor="let student of students" class="student-id-container">
+        <div class="school-logo-container">
+            <img src="{{student.school_logo}}" alt="School_logo" width="100px" height="100px">
+            <label for="">{{student.school_name}}</label>
+        </div>
+        <hr>
+        <div class="student-details-container">
+            <div class="student-info-container">
+                <label for="">ID: {{student.id}}</label>
+                <label for="">Name: {{student.name}} </label>
+                <label for="">DOB: {{student.dob}} </label>
+                <label for="">Phone: {{student.phone}}</label>
+                <label for="">City: {{student.city}}</label>
+                <label for="">E-Mail: {{student.email}}</label>
+            </div>
+            <div class="profile-picture-container">
+                <img src="{{student.profile_picture}}" alt="Student Photo" width="150px" height="200px">
+            </div>
+        </div>
+        <hr>
+        <div class="school-details-container">
+            <label for="">School-city: {{student.school_city}}</label><br>
+            <label for="">School-pin: {{student.school_pin}}</label><br>
+            <div class="button-container">
+                <button (click)="view(student.id)" style="background-color: black; color: white;">View</button>
+                <button (click)="edit(student.id)" style="background-color: blue;color: white;">Edit</button>
+                <button (click)="delete(student.id)" style="background-color: red; color: white;">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+<p>directive-pipes works!</p>
+
+
+
+
+<h1 *ngFor="let age of ages">
+    My age is{{age}}
+</h1>
+
+<ul>
+    <li *ngFor="let state of states">
+
+        My state is{{state |  uppercase}}
+
+
+    </li>
+</ul>
+
+<select name="" id="">
+    <option *ngFor = "let state of states; let i=index" value="">
+       {{i+1}} {{state | lowercase}}
+    </option>
+</select>
+
+<h3 *ngFor = "let user of users">
+    My name is {{user.name}}. My age is {{user.age}}. My phone is{{user.phone}}.
+</h3>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of users">
+            <td>{{user.name}}</td>
+            <td>{{user.age}}</td>
+            <!-- apply color to single row -->
+            <td style="color: green;" >{{user.age}}</td>
+            <!--apply colour to two senarios separately-->
+            <td [ngStyle] = "{'color':user.age<18?'red':'green'}">{{user.age}}</td>
+             <!--apply colour to multiple senarios -->
+             <!-- <td [ngClass]="{'pass':user.marks>50}"></td> -->
+
+            <td>{{user.phone}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- *ngIf-->
+<h1 *ngIf="true">Hello text one</h1>
+<h1 *ngIf="false">Hello text one</h1>
+
+<!--Pipes-->
+<h1>{{today}}</h1>
+
+<h1>{{today | date }}</h1>
+<h1>{{today | date:'yyyy-M-dd'}}</h1>
+<h1>{{today | date:'yyyy-MM-dd'}}</h1>
+<h1>{{today | date:'yyyy-MMM-dd'}}</h1>
+<h1>{{today | date:'yyyy-MMMM-dd'}}</h1>
+<h1>{{today | date:'dd/MM/yy'}}</h1>
+<h1>{{today | date:'dd-MMMM-YYY , hh:mm:ss a EEEE zzz'}}</h1>

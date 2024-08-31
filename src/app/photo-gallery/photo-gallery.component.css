@@ -1,0 +1,22 @@
+.meme-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .meme-item {
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    background-color: #f0f0f0;
+  }
+  
+  .meme-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  

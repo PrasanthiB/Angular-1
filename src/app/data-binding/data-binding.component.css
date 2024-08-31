@@ -1,0 +1,73 @@
+/* General styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Styles for headings */
+h1, h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Styles for the labels */
+label {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555555;
+}
+
+/* Styles for the input fields */
+input[type="text"] {
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Styles for the button */
+button {
+    padding: 10px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #ffffff;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button[disabled] {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+button:hover:not([disabled]) {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Styles for images */
+img {
+    display: block;
+    margin-top: 15px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Styles for paragraphs */
+p {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #333333;
+}

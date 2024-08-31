@@ -1,0 +1,22 @@
+<div class="header-container">
+    <h1>Body Mass Index (BMI) Calculator</h1>
+    <div class="header2-container">
+        <div class="left-container">
+            <div class="label1-container">
+                <label for="">Height:</label>
+                <input type="number" id="hgt" [(ngModel)] = "height"><label for="">Cm</label>
+                <br><br>
+                <label for="">Weight</label>
+                <input type="number" id="wgt" [(ngModel)] = "weight"><label for="">kg</label>
+                <br><br>
+            </div>
+            <button (click)="calculateBmi()">Calculate</button><br><br>
+            <div class="label2-container">
+                <label for="" >Result {{this.bmi}} </label> <br><br>
+            </div>
+        </div>
+        <div class="right-container">
+            <img src="https://www.fitterfly.com/blog/wp-content/uploads/2023/02/Understanding-Your-BMI-A-Guide-to-Reading-a-BMI-Chart.jpg" alt="BMI Image" width="100%" height="100%">
+        </div>
+    </div>
+</div>
