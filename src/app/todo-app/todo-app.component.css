@@ -1,0 +1,59 @@
+.todoapp-container {
+    width: 90%;
+    height: 90%;
+    border: solid aqua;
+    /* padding: 5px; */
+    text-align: center;
+    background-color: aquamarine;   
+}
+
+.all-todo-container{
+    width: 80%;
+    height: 75%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightblue;
+    margin: 50px 90px;
+    border: darkblue;
+}
+
+.todoapp1-container {
+    width: 35%;
+    height: 90%;
+    border: solid black;
+    background-color: lightsalmon;
+    border: darkorange;
+}
+
+.todoapp2-container {
+    width: 35%;
+    height: 90%;
+    border: solid black;
+    background-color: lightgreen;
+    border: darkgreen;
+}
+
+.todoapp3-container {
+    width: 35%;
+    height: 90%;
+    border: solid black;
+    background-color: lightpink;
+    border: darkmagenta;
+}
+
+button{
+    width: 50px;
+    height: 30px;
+}
+
+.button-container{
+    width: 50%;
+    /* height: 5%; */
+    padding: 10px;
+    margin: 100px 50px 70px;
+    border: solid black;
+    gap: 10px;
+    
+}

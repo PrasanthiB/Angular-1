@@ -1,0 +1,17 @@
+<div>
+    <textarea cols="15" rows="6" [(ngModel)]="text" (ngModelChange)="onTextChange($event)" [attr.maxlength]="maxlength"></textarea>
+    <div class="count">
+      {{ text.length }}/{{ maxlength }}
+    </div>
+  </div>
+  
+
+  <div>
+    <label for="">Number1</label>
+    <input type="number">
+    <br><br>
+    <label for="">Number2</label>
+    <input type="number">
+
+    <app-child ></app-child>
+  </div>

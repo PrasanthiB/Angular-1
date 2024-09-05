@@ -27,15 +27,24 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 
-Git Repository
---------------
 
-Step 1: To create new Git Repository
+<------------------------------------------------------------------------------------->
+
+GitHub
+------
+
+Step 1: To create new Git Repository(laptop to website)
 1)Download and install git  - cmd git -v(version check)
 2)Open github.com and create the account
 3)Create  - git config --global user.name "PrasanthiB"
           - git config --global user.email "prasanthi.bobbilli@gmail.com"
 4)Check:  - git config --list
+
+Advantages
+----------
+1)Code loss
+2)Collaborative
+3)Version control - git log
 
 
 Step 2: To upload new project
@@ -53,8 +62,12 @@ Code Sync
 1)git add . (Changes -> staged changes)
 2)git commit -m "xxxxxxx" (staged changes -> zero)
 3)git push  note:give (git push --set-upstream origin master -f)
-4)
+  note:(100% commit in github)
 
 
 open project using cmd prompt - cd appname
                               - code .
+
+
+
+                              

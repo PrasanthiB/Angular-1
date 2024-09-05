@@ -8,7 +8,11 @@
             </div>
             <div class="input-container">
                 <label for="password">ENTER PASSWORD:</label>
-                <input type="text" id="password" placeholder="enter password" formControlName="password">
+                <input type="password" id="password" placeholder="enter password" formControlName="password">
+                <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+                    <p class="error" *ngIf="loginForm.get('password')?.errors?.['required']">Password in required</p>
+                    <p class="error" *ngIf="loginForm.get('password')?.errors?.['pattern']">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</p>
+                </div>
             </div>
             <button (click)="login()">login</button>
         </form>

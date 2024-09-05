@@ -5,7 +5,8 @@
             <div>
                 <img src="{{product.image}}" alt="" width="50%" height="250px">
             </div>
-            <div class="rate">{{product.rate}}</div>
+            <div><app-rating [rating]="product.rating.rate"></app-rating> 
+            </div>
             <div class="category">{{product.category}}</div>
             <div class="title">{{product.title}} </div>
             <div class="price">{{product.price}}</div>

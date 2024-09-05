@@ -29,6 +29,14 @@ import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
 import { ViewBankdetailsComponent } from './view-bankdetails/view-bankdetails.component';
 import { ViewStudentComponent } from './view-student/view-student.component';
 import { CountrycityLangComponent } from './countrycity-lang/countrycity-lang.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { CreateStudentsComponent } from './create-students/create-students.component';
+import { ParentComponent } from './parent/parent.component';
+import { RatingComponent } from './rating/rating.component';
+import { ParentTextAreaLimitComponent } from './parent-text-area-limit/parent-text-area-limit.component';
+import { SiblingComponent } from './sibling/sibling.component';
+import { ItemsComponentComponent } from './items-component/items-component.component';
+import { TodoAppComponent } from './todo-app/todo-app.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -61,7 +69,15 @@ const routes: Routes = [
     {path:'photo-gallery',component:PhotoGalleryComponent},
     {path:'gmails',component:GmailsComponent},
     {path:'reload',component:ReloadComponent},
-    {path:'countrycitylang',component:CountrycityLangComponent}
+    {path:'countrycitylang',component:CountrycityLangComponent},
+    {path:'create-user',component:CreateUserComponent},
+    {path:'create-students',component:CreateStudentsComponent},
+    {path:'parent',component:ParentComponent},
+    {path:'rating',component:RatingComponent},
+    {path:'parentTextAreaLimit',component:ParentTextAreaLimitComponent},
+    {path:'sibling',component:SiblingComponent},
+    {path:'ItemsComponent',component:ItemsComponentComponent},
+    {path: 'todoApp',component:TodoAppComponent}
   
  ]},
   {path:'**',component:PagenotfoundComponent}

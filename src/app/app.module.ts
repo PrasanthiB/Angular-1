@@ -34,6 +34,24 @@ import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
 import { ViewBankdetailsComponent } from './view-bankdetails/view-bankdetails.component';
 import { ViewStudentComponent } from './view-student/view-student.component';
 import { CountrycityLangComponent } from './countrycity-lang/countrycity-lang.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { CreateStudentsComponent } from './create-students/create-students.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
+import { ParentTextAreaLimitComponent } from './parent-text-area-limit/parent-text-area-limit.component';
+import { ChildTextAreaLimitComponent } from './child-text-area-limit/child-text-area-limit.component';
+import { SiblingComponent } from './sibling/sibling.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { ItemsComponentComponent } from './items-component/items-component.component';
+import { NavComponentComponent } from './nav-component/nav-component.component';
+import { CartComponentComponent } from './cart-component/cart-component.component';
+import { DiscountComponentComponent } from './discount-component/discount-component.component';
+import { TodoAppComponent } from './todo-app/todo-app.component';
+import { TodoApp1Component } from './todo-app1/todo-app1.component';
+import { TodoApp2Component } from './todo-app2/todo-app2.component';
+import { TodoApp3Component } from './todo-app3/todo-app3.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +83,25 @@ import { CountrycityLangComponent } from './countrycity-lang/countrycity-lang.co
     ViewVehicleComponent,
     ViewBankdetailsComponent,
     ViewStudentComponent,
-    CountrycityLangComponent
+    CountrycityLangComponent,
+    CreateUserComponent,
+    CreateStudentsComponent,
+    ParentComponent,
+    ChildComponent,
+    RatingComponent,
+    ParentTextAreaLimitComponent,
+    ChildTextAreaLimitComponent,
+    SiblingComponent,
+    Sibling1Component,
+    Sibling2Component,
+    ItemsComponentComponent,
+    NavComponentComponent,
+    CartComponentComponent,
+    DiscountComponentComponent,
+    TodoAppComponent,
+    TodoApp1Component,
+    TodoApp2Component,
+    TodoApp3Component,
     
    ],
   imports: [
@@ -75,6 +111,7 @@ import { CountrycityLangComponent } from './countrycity-lang/countrycity-lang.co
     HttpClientModule,
     ReactiveFormsModule,
     CommonModule,
+   
     
 
   ],

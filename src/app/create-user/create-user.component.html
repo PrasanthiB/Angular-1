@@ -1,0 +1,131 @@
+<div class="app-container">
+    <h1>Create-User Form</h1>
+
+    <form [formGroup]="userForm">
+        <label for="">Name:</label>
+        <input type="text" placeholder="enter your name" formControlName="name">
+        <div *ngIf="userForm.get('name')?.touched && userForm.get('name')?.invalid">
+            <p class="error" *ngIf="userForm.get('name')?.errors?.['required']">Name is required</p>
+            <p class="error" *ngIf="userForm.get('name')?.errors?.['minlength']">minimum 5 char is required</p>
+            <p class="error" *ngIf="userForm.get('name')?.errors?.['maxlength']">maximum 12 char only</p>
+        </div>
+        <br>
+
+        <label for="">Age:</label>
+        <input type="number" placeholder="enter yore age" formControlName="age">
+        <div *ngIf="userForm.get('age')?.touched && userForm.get('age')?.invalid">
+            <p class="error" *ngIf="userForm.get('age')?.errors?.['required']">Age is required</p>
+            <p class="error" *ngIf="userForm.get('age')?.errors?.['min']">minimum 18 years</p>
+            <p class="error" *ngIf="userForm.get('age')?.errors?.['max']">maximum 60 years</p>
+        </div>
+        <br>
+
+        <label for="">Phone:</label>
+        <input type="text" placeholder="enter your phone number" formControlName="phone">
+        <div *ngIf="userForm.get('phone')?.touched && userForm.get('phone')?.invalid">
+            <p class="error" *ngIf="userForm.get('phone')?.errors?.['required']">Phone Number is required</p>
+            <p class="error" *ngIf="userForm.get('phone')?.errors?.['min']">minimum 10 digits</p>
+            <p class="error" *ngIf="userForm.get('phone')?.errors?.['max']">maximum 10 digits</p>
+        </div>
+        <br>
+
+        <label for="">E-Mail:</label>
+        <input type="text" placeholder="enter your email" formControlName="email">
+        <div *ngIf="userForm.get('email')?.touched && userForm.get('email')?.invalid">
+            <p class="error" *ngIf="userForm.get('email')?.errors?.['required']">Email is required</p>
+            <p class="error" *ngIf="userForm.get('email')?.errors?.['email']">Invalid email format</p>
+        </div>
+        <br>
+
+        <div formGroupName="address">
+            <label for="">State:</label>
+            <input type="text" placeholder="enter yore state" formControlName="state">
+            <div
+                *ngIf="userForm.get('address')?.get('state')?.touched && userForm.get('address')?.get('state')?.invalid">
+                <p class="error" *ngIf="userForm.get('address')?.get('state')?.errors?.['required']">State is required
+                </p>
+            </div>
+            <label for="">Pincode:</label>
+            <input type="text" placeholder="enter pincode" formControlName="pincode">
+            <div
+                *ngIf="userForm.get('address')?.get('pincode')?.touched && userForm.get('address')?.get('pincode')?.invalid">
+                <p class="error" *ngIf="userForm.get('address')?.get('pincode')?.errors?.['required']">Pincode is
+                    required</p>
+            </div>
+        </div>
+
+        <label for="">Type:</label>
+        <label for="">Day Scholar:</label>
+        <input type="radio" name="type" formControlName="type" value="dayScholar">
+        <label for="">Residential:</label>
+        <input type="radio" name="type" formControlName="type" value="residential">
+        <br><br>
+
+        <div *ngIf="userForm.get('type')?.value=='dayScholar'">
+            <label for="">Bus Fee:</label>
+            <input type="text" formControlName="busfee">
+            <div *ngIf="userForm.get('busfee')?.touched">
+                <small class="error" *ngIf="userForm.get('busfee')?.errors?.['required']">Bus Fee is required</small>
+            </div>
+            <br>
+        </div>
+
+        <div *ngIf="userForm.get('type')?.value=='residential'">
+            <label for="">Hostel Fee:</label>
+            <input type="text" formControlName="hostelfee">
+            <div *ngIf="userForm.get('hostelfee')?.touched">
+                <small class="error" *ngIf="userForm.get('hostelfee')?.errors?.['required']">Hostel Fee is required</small>
+                <br>
+            </div>
+        </div>
+
+        <button style="background-color: blue;" (click)="addCard()">Add Card</button>
+        <br><br>
+        <button (click)="submit()">Submit</button>
+
+        <div formArrayName="cards">
+            <div *ngFor="let card of cardsFormArray.controls; let i=index">
+                <div formGroupName="{{i}}">
+
+                    <h3>Card {{i+1}}</h3>
+
+                    <label for="">Number:</label>
+                    <input type="number" placeholder="enter card number" formControlName="number">
+                    <div
+                        *ngIf="cardsFormArray.controls[i]?.get('number')?.touched && cardsFormArray.controls[i]?.get('number')?.invalid">
+                        <p class="error" *ngIf="cardsFormArray.controls[i]?.get('number')?.errors?.['required']">
+                            Card number is required</p>
+                        <p class="error" *ngIf="cardsFormArray.controls[i]?.get('number')?.errors?.['pattern']">Card
+                            number must be 16 digits long.</p>
+                    </div>
+                    <br>
+
+                    <label for="">Expiry:</label>
+                    <input type="month" placeholder="enter card expiry date" formControlName="expiry">
+                    <div
+                        *ngIf="cardsFormArray.controls[i]?.get('expiry')?.touched && cardsFormArray.controls[i]?.get('expiry')?.invalid">
+                        <p class="error" *ngIf="cardsFormArray.controls[i]?.get('expiry')?.errors?.['required']">Expiry
+                            date is required</p>
+                        <p class="error" *ngIf="cardsFormArray.controls[i]?.get('expiry')?.errors?.['pattern']">Expiry
+                            date must be in MM/YY format</p>
+                    </div>
+                    <br>
+
+                    <label for="">CVV:</label>
+                    <input type="number" placeholder="enter cvv" formControlName="cvv">
+                    <div
+                        *ngIf="cardsFormArray.controls[i]?.get('cvv')?.touched && cardsFormArray.controls[i]?.get('cvv')?.invalid">
+                        <p class="error" *ngIf="cardsFormArray.controls[i]?.get('cvv')?.errors?.['required']">CVV is
+                            required</p>
+                        <p class="error" *ngIf="cardsFormArray.controls[i]?.get('cvv')?.errors?.['pattern']">CVV must be
+                            a 3 or 4 digit number</p>
+                    </div>
+                    <br>
+
+                    <button style="background-color: red; width: 80px; height: 40px;margin: 0px 120px;"
+                        (click)="delete(i)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

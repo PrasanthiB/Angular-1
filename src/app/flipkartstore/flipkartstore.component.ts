@@ -10,6 +10,7 @@ export class FlipkartstoreComponent {
 
   
   public products:any = [];
+  public products1:any = [];
   
   constructor(private _flipkartstoresService:FlipkartstoresService){
     -_flipkartstoresService.getproduct().subscribe(
